@@ -9,7 +9,8 @@ jobs:
   update-gist:
     runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Update Gist
         run: |
           swift run ShortcutBox xcode.json
